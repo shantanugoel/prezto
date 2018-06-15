@@ -11,3 +11,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+set HIST_FIND_NO_DUPS
+EDITOR=vim
+VISUAL=vim
+ZLE_RPROMPT_INDENT=1
+DEFAULT_USER=$USER
+
+### Powerlevel9k theme settings
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+
+####### Workaround for docker quirks with shell inside container.
+####### Use with `goinside <containername`
+autoload bashcompinit
+bashcompinit
+goinside(){
+    docker exec -it $1 bash -c "stty cols $COLUMNS rows $LINES && bash";
+}
+_goinside(){
+    COMPREPLY=( $(docker ps --format "{{.Names}}" -f name=$2) );
+}
+complete -F _goinside goinside;
+export goinside;
+###########
+
+export NVM_DIR="/home/shantanu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
