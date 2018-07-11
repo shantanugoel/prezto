@@ -19,6 +19,7 @@ DEFAULT_USER=$USER
 
 ### Powerlevel9k theme settings
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context virtualenv dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator background_jobs history time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MODE='nerdfont-complete'
