@@ -27,6 +27,9 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
+# Pure settings
+RPROMPT='%F{white}%*'
+
 ####### Workaround for docker quirks with shell inside container.
 ####### Use with `goinside <containername`
 autoload bashcompinit
