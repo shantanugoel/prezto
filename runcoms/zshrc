@@ -27,8 +27,10 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-# Pure settings
-RPROMPT='%F{white}%*'
+# Spaceship settings
+SPACESHIP_TIME_COLOR=magenta
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_VI_MODE_SHOW=false
 
 ####### Workaround for docker quirks with shell inside container.
 ####### Use with `goinside <containername`
