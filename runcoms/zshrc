@@ -60,3 +60,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias e='emacsclient -na "" -c'
 alias et='emacsclient -nw -c'
 alias magit='emacsclient -nw -e "(progn (magit-status) (delete-other-windows))"'
+
+#System time in prompt (if using pure theme)
+PROMPT='%F{white}%* '$PROMPT
